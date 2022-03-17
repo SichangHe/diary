@@ -1,0 +1,13 @@
+[book]
+authors = ["StevenHe"]
+language = "en"
+multilingual = false
+src = "src"
+title = "StevenHe's diary"
+
+[output.html]
+git-repository-url = "https://github.com/SichangHe/diary"
+mathjax-support = true
+
+[build]
+build-dir = "docs"
