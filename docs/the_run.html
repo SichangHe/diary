@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>start - StevenHe&#x27;s diary</title>
+        <title>The Run - StevenHe&#x27;s diary</title>
 
 
         <!-- Custom HTML head -->
@@ -83,7 +83,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="start.html">start</a></li><li class="chapter-item expanded affix "><a href="vscodium.html">VSCodium</a></li><li class="chapter-item expanded affix "><a href="the_run.html">The Run</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="start.html">start</a></li><li class="chapter-item expanded affix "><a href="vscodium.html">VSCodium</a></li><li class="chapter-item expanded affix "><a href="the_run.html" class="active">The Run</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -147,146 +147,173 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="start"><a class="header" href="#start">start</a></h1>
-<p><em>2022-03-17</em></p>
-<p>I have this feeling that I am about to be unable to write.</p>
-<p>Been having all sorts of math, stats, and CS courses,
-there is really not much writing to do.
-DKU provides little paper to write, specifically, little literature-ish things.</p>
-<p>All said, I decided to start writing diaries.
-Not for people to read, but more for me to stay sane on the writing side.</p>
-<h2 id="choice-for-the-diary"><a class="header" href="#choice-for-the-diary">choice for the diary</a></h2>
-<h3 id="my-take-on-blogs"><a class="header" href="#my-take-on-blogs">my take on blogs</a></h3>
-<p>Some people have blogs.</p>
-<p>It's a good idea to have your things on the web,
-so it lasts longer than your local file,
-or worse, a piece of paper made in the 2020s.
-But, I dislike the idea that you write something solely about yourself
-for others to read.</p>
-<p>That does not affect my adoption of the shell of blogs.
-I will put this diary on the web.</p>
-<h3 id="generate-html"><a class="header" href="#generate-html">generate HTML</a></h3>
-<p>To post something on the web, you need HTML,
-and there are different ways to make HTML.</p>
-<h4 id="wordpress"><a class="header" href="#wordpress">WordPress</a></h4>
-<p>The most popular way is <a href="https://wordpress.com">WordPress</a>.</p>
-<blockquote>
-<p>43% of the web is built on WordPress.
-More bloggers, small businesses,
-and Fortune 500 companies use WordPress than all other options combined.
-Join the millions of people that call WordPress.com home.</p>
-</blockquote>
-<p>What a great ad from WordPress themselves!
-I would have fallen for it if I did not know how bloated WordPress is.</p>
-<p>The <a href="https://dukekunshan.edu.cn">DKU website</a> itself runs WordPress.
-And, the performance is &quot;insane&quot;.
-You can open a small webpage in 5 seconds!
-Imagine?
-And also some webpage in 30 seconds!
-Amazing!</p>
-<p>The <a href="intersections@dukekunshan.edu.cn">Intersection</a> uses WordPress for its website
-(not published yet).
-I saw the source code it generates for a simple article:
-<em>7 layers of nested divs!</em>
-And, it also has &quot;insane&quot; performance.</p>
-<p>If I look back from the future and see WordPress's dominance,
-what would I think?
-People were crazy?</p>
-<p>No, people are lazy and will not change if things work.</p>
-<h4 id="hand-write"><a class="header" href="#hand-write">hand write</a></h4>
-<p>It is possible,
-but the HTML part probably would take much more time than the text part.</p>
-<p>Plus, the CSS part would be the most annoying.</p>
-<h4 id="markdown"><a class="header" href="#markdown">Markdown</a></h4>
-<p>Markdown is a lightweight markup language that looks nice as source code.
-It is rendered by converting to HTML.</p>
-<p>I feel fast and delightful writing Markdown for my notes.
-Also, I used Markdown to write presentation slides and it is just minimum effort.</p>
-<p>Without more trash talk,
-it is sure that I would choose Markdown if possible.</p>
-<p>But, what flavor?</p>
-<h3 id="markdown-flavor"><a class="header" href="#markdown-flavor">Markdown flavor</a></h3>
-<p>Markdown has a shit ton of different flavors.</p>
-<p>Some does not eat your <code>\n</code>,
-some support \(\TeX\),
-and some support PHP.</p>
-<p>What I need is:</p>
-<ol>
-<li>Math support</li>
-<li>Code block support/ highlighting</li>
-<li>Nice look</li>
-<li>Simplicity</li>
-<li>Git friendliness (short lines)</li>
-<li>Live Preview</li>
-</ol>
-<p>I ended up considering <a href="https://gohugo.io">Hugo</a>
-and <a href="https://rust-lang.github.io/mdBook/index.html">mdBook</a>
-only for fast and simple Markdown-HTML conversion.</p>
-<h4 id="hugo"><a class="header" href="#hugo">Hugo</a></h4>
-<p>I found Hugo by searching Markdown website
-(or something like that) for DKU iGEM Wiki
-(a future thing).
-It is marketed as an easy-to-use and <em>fastest</em> static site generator.</p>
-<p>It has many themes that the community made.
-Most of them look like PowerPoint templates (no offense).</p>
-<p>I spent way too much time looking around to find a nice looking theme,
-and found <a href="https://github.com/alex-shpak/hugo-book">hugo-book</a>
-and <a href="https://github.com/h-enk/doks">Doks</a>.</p>
-<p><code>hugo-book</code> just looks like a crappy version of GitBook,
-might as well use GitBook.
-But, GitBook is &quot;converted&quot; from open source to &quot;proprietary services&quot;
-(what a shame).
-Might as well use mdBook which is still open source.</p>
-<p><code>Doks</code> look nice,
-but it shocked me by taking 500MB on my disk
-(how does some HTML and CSS text take so much space?).
-It is absolutely not anything lightweight,
-and it reminds me of WordPress…</p>
-<p>Without a good theme,
-I have no <code>Nice look</code> nor <code>Simplicity</code>
-and I need to implement Math support and Code highlighting myself
-(which, is just adding some <code>&lt;link&gt;</code> on top of the file,
-but still, annoying).
-Also, some themes I tried are buggy
-and do not even work if I added the math support.</p>
-<h4 id="mdbook"><a class="header" href="#mdbook">mdBook</a></h4>
-<p>mdBook basically supports everything I mentioned out of the box.</p>
-<p>The &quot;downside&quot; is that it has only 5 themes
-(which you can try by clicking the brush top-left),
-and they all have the same structure.
-However, I don't need a thousand custom themes that are crappy,
-instead, one good theme is good.</p>
-<p>It saves me the burden to fight with CSS (great!).</p>
-<p>That is why you are seeing this diary in mdBook form.</p>
-<h2 id="web-server"><a class="header" href="#web-server">web server</a></h2>
-<p>I need a server to host the diary.</p>
-<p>I can host it on my machine,
-but a domain name is just a waste of money in my opinion.
-And, getting a paid server provider is the same.</p>
-<p>Then, I saw GitHub as a free service provider:
-GitHub pages.
-And, it actually does the thing:
-host your website.
-It also is fast.</p>
-<p>The downside is that GitHub is blocked from PRC using DNS pollution
-(or something).
-GitLab is not and it works in PRC.
-However, I do not like the GitLab interface,
-and GitLab is much slower and laggier.</p>
-<p>Eventually, I decided to choose GitHub.</p>
-<h2 id="coda"><a class="header" href="#coda">coda</a></h2>
-<p>That will do.
-I just &quot;wasted&quot; a whole morning on this thing.</p>
-<p>Now, I will go to lunch and then put this on GitHub.</p>
+                        <h1 id="the-run"><a class="header" href="#the-run">The Run</a></h1>
+<p>2022-05-08</p>
+<p>It is 7 on the morning.
+I woke up at 6:30 because of the noise on the train—people talking,
+watching videos while letting the sound out loud,
+and noise from plastic bags when someone grabs something to eat.</p>
+<p>I am on a “fast” train from Jinhua to Guangzhou.
+“Fast” is the type of train prefixed with <em>K</em> and it is ironically the slowest.
+The train goes about 100km/h and it was considered “fast” when it came out.</p>
+<p>I am writing this in a bed with narrow space around me.</p>
+<h2 id="the-lockdown"><a class="header" href="#the-lockdown">The lockdown</a></h2>
+<p>I have been in a lockdown in Kunshan for a month.
+During the time,
+we have been having courses fully online.
+The total places that we are allowed to go is the union of campus,
+the apartment,
+and the school shuttles that travel between them.
+We are also forbidden from delivery food due to “potential contamination”
+while the school shut down all canteens but one.</p>
+<h2 id="permission-to-leave"><a class="header" href="#permission-to-leave">Permission to leave</a></h2>
+<p>Near the end of April,
+we received an email that says something about
+students telling the school that they need to leave
+to apply for the visa because they are going aboard,
+and asks those who want to leave before May to fill in a questionnaire
+so that they can send them out of Kunshan on a bus to Suzhou.
+I did not want to leave just in a few days
+because I have all the belongings to pack.
+There is also a catch
+that the school will throw away all the personal belongings left.</p>
+<p>On May 1,
+they sent a similar email “to collect information.”
+I calculated and decided to leave on May 7.
+I bought the plane ticket and filled in the questionnaire.</p>
+<p>If that worked as expected,
+I would have arrived home by now.
+But, the airline was cancelled on May 4.
+After a lot of searching,
+the alternative is “fast” train from Jinhua.</p>
+<p>The questionnaire was a mystery.
+Nothing came back from the school.
+On May 5,
+because the airline was cancelled,
+I called Chinese Students Services (also CSS, ironically).
+They answered the phone after a few attempts.
+The answer was that the school was “collecting information,”
+and they just sent the people leaving on May 5 to Suzhou.
+CSS told me that the information for us will come in a day or two.
+They also implied that the bus usually leaves around 9 or 10.
+My impression was basically:
+we don’t ensure anything would happen so we have no responsibility.</p>
+<p>Anyway,
+at 9 a.m. on May 7,
+I got the bus and left Kunshan the jail.</p>
+<h2 id="a-crowded-square"><a class="header" href="#a-crowded-square">A crowded square</a></h2>
+<p>The ride to Suzhou North Railway Station was smooth,
+with no questions asked on the way.
+This was because because Suzhou was just downgraded to “low risk area”
+and the travel code would be green
+as opposed to green with an astroid for a city with COVID cases.</p>
+<p>The station has two layers of gates,
+each with several guards who check people’s tickets and travel code.
+Only those who have already bought the tickets
+and have a green code can enter the station.</p>
+<p>After I enter the station gate,
+a man behind me commented:
+“so many stuffs!
+You are moving house?
+Where are you going to?”
+I told him Jinhua.
+He said he was going to Jinhua as well and asked me where am I from.
+“Hunan.”
+“That’s great!
+I am from Hunan as well,
+we can have companies.”
+said the young man wearing glasses with a large suitcase.</p>
+<p>We entered the station,
+which has a large square in front of the building,
+enclosed by large fences.
+The people at the door of the building checked our tickets
+and told us that we may only enter after 1:30 p.m.
+because our trains are in the afternoon.</p>
+<p>It was still 10 a.m.
+The sum was shining above us and the weather was hot.
+We found a tree in the square,
+parked our luggage,
+and sat there.</p>
+<p>The square was so crowded.
+It is about 100m wide with a lot of stone seats,
+but nearly every seat is occupied,
+and luggages are everywhere.</p>
+<p>The man told me that there was a wave of people going home.
+He said now that Kunshan has green travel code without the astroid,
+people can finally leave after one month of lockdown.
+He showed me a few videos on his cellphone.
+One of them was people raiding a shop for food in April.
+Another was blood everywhere on the ground,
+and people standing around doing nothing.
+He told me that people in his factory had a fight
+and the policemen had just entered.
+The leading policeman laughed in the video:
+“killed someone, huh?”
+as if he was watching a comedy show.</p>
+<p>The man complained to me that Jiangsu people are less kind than Hunan people.
+He said that Jiangsu people tend to put up a fight easily.
+Apparently,
+he was leaving this place and going home,
+and he must have quit his job in the factory.</p>
+<p>With this new “friend” watching out for my luggages,
+I checked around the square for shops.
+It was quite a walk.
+The square spans a whole area and was full of people.
+There was no sign of shops open except for two shops at the edge of the building,
+but both of them are closed.
+The men’s and women’s room were outside of the station.
+There was an exit by the entrance of the station.
+Two men sat there,
+one of them holding the fence gate handle.
+They told me to leave my National ID on the bench with the other people’s,
+and take it when I came back.</p>
+<p>The real problem was lunch.
+There wasn’t even a place that sells water.
+Our “friend” spotted a man eating delivery food.
+I asked the eater,
+who told me that he received the delivery food across the fence.
+I ordered and ate delivery food for lunch,
+which was handed into the square above the fence.</p>
+<p>When I was eating my lunch by the tree,
+a few aged women came to water the tree.
+We had to move all our luggages
+and watch the women water the tree
+until everything around the flowerbed is wet.
+They laughed and watered more trees while yelling at people to leave.</p>
+<h2 id="enter-the-station"><a class="header" href="#enter-the-station">Enter the station</a></h2>
+<p>At 1 p.m.,
+our “friend” suggested that we join the queue to enter the station building.
+At that time there were already two dozen people in the queue,
+and everyone could only enter half an hour later.</p>
+<p>As time goes by,
+the queue grew longer quickly.
+I took out the laptop and tried to read,
+but the laptop was so hot under the sun,
+that I gave up soon and started to stand still.</p>
+<p>After 25 minutes or so,
+the queue began to move forward
+and people started to sneak in.
+The sneakers either smiled and just jumped in the queue,
+or pretended to be dumb.
+A station staff came to argue with some of the sneakers,
+but there were so many of them that the staff did not see some.</p>
+<p>Nonetheless,
+I entered the station and enjoyed the air conditioner.</p>
+<h2 id="the-rest"><a class="header" href="#the-rest">The rest</a></h2>
+<p>I jumped into the train to Jinhua 2 hours later.
+The train was full of luggage
+and I had to put my luggage between the carriage.
+The situation was not better in the train from Jinhua to Guangzhou.
+So many people are running away from Jiangsu and it makes total sense.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-
-                            <a rel="next" href="vscodium.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                                <i class="fa fa-angle-right"></i>
+                            <a rel="prev" href="vscodium.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
                             </a>
+
 
                         <div style="clear: both"></div>
                     </nav>
@@ -294,10 +321,10 @@ I just &quot;wasted&quot; a whole morning on this thing.</p>
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-
-                    <a rel="next" href="vscodium.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                        <i class="fa fa-angle-right"></i>
+                    <a rel="prev" href="vscodium.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
                     </a>
+
             </nav>
 
         </div>
