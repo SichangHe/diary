@@ -4,3 +4,4 @@
     [VSCodium](vscodium.md)
     [The Run](the_run.md)
     [Feeling Lost](feeling_lost.md)
+    [Linux VM and Neovim](linux_vm_and_neovim.md)
