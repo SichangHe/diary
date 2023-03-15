@@ -40,4 +40,23 @@ Main reasons why Rails suck:
 
 ## Learning Elixir
 
+- Went through Elixir official doc.
+- Did a few Exercism exercises.
+- Went through *Functional Web Development with Elixir, OTP, and Phoenix*
+    until they started to use Phoenix channels and the API has changed.
+    - Technically, only learned about Elixir, not Phoenix.
+    - GenServer is the main way to handle states and side effects.
+
 ## Learning Phoenix
+
+I have not actually started using Phoenix yet.
+
+When following the *Functional Web Development* book,
+I wanted to separate the Elixir project into several modules,
+so I created an umbrella project and initialized a Phoenix project inside it.
+The project straight-up could not build.
+
+I then initialized a Phoenix umbrella project.
+It builds and runs fine.
+But, it creates a weird project structure that intertwines with Phoenix.
+So, I guess I will just not use umbrellas when I want true separation.
