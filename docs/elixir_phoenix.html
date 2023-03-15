@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Back from Duke - StevenHe&#x27;s diary</title>
+        <title>Elixir Phoenix - StevenHe&#x27;s diary</title>
 
 
         <!-- Custom HTML head -->
@@ -85,7 +85,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="start.html"><strong aria-hidden="true">1.</strong> start</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="vscodium.html"><strong aria-hidden="true">1.1.</strong> VSCodium</a></li><li class="chapter-item expanded "><a href="the_run.html"><strong aria-hidden="true">1.2.</strong> The Run</a></li><li class="chapter-item expanded "><a href="feeling_lost.html"><strong aria-hidden="true">1.3.</strong> Feeling Lost</a></li><li class="chapter-item expanded "><a href="linux_vm_and_neovim.html"><strong aria-hidden="true">1.4.</strong> Linux VM and Neovim</a></li></ol></li><li class="chapter-item expanded "><a href="back_from_duke.html" class="active"><strong aria-hidden="true">2.</strong> Back from Duke</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="elixir_phoenix.html"><strong aria-hidden="true">2.1.</strong> Elixir Phoenix</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="start.html"><strong aria-hidden="true">1.</strong> start</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="vscodium.html"><strong aria-hidden="true">1.1.</strong> VSCodium</a></li><li class="chapter-item expanded "><a href="the_run.html"><strong aria-hidden="true">1.2.</strong> The Run</a></li><li class="chapter-item expanded "><a href="feeling_lost.html"><strong aria-hidden="true">1.3.</strong> Feeling Lost</a></li><li class="chapter-item expanded "><a href="linux_vm_and_neovim.html"><strong aria-hidden="true">1.4.</strong> Linux VM and Neovim</a></li></ol></li><li class="chapter-item expanded "><a href="back_from_duke.html"><strong aria-hidden="true">2.</strong> Back from Duke</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="elixir_phoenix.html" class="active"><strong aria-hidden="true">2.1.</strong> Elixir Phoenix</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -149,56 +149,84 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="back-from-duke"><a class="header" href="#back-from-duke">Back from Duke</a></h1>
-<p>20230313</p>
-<p>I have abandoned this diary for a long time since I went to Duke last fall
-semester.
-This could be reasoned at follows:</p>
+                        <h1 id="elixir-phoenix"><a class="header" href="#elixir-phoenix">Elixir Phoenix</a></h1>
+<p>I need a back end technology.
+First, I thought Ruby on Rails was the most suitable.
+Now, I am turning to the Elixir Phoenix Framework.</p>
+<h2 id="leaving-rails"><a class="header" href="#leaving-rails">Leaving Rails</a></h2>
+<p>Rails was said to be the most productive back end framework.</p>
+<p>I learned Ruby and walked through the Rails &quot;getting started&quot; document
+last summer.
+Then, I made <a href="https://github.com/SichangHe/forum">a forum</a>.</p>
+<p>Pain started to increase when I was making the forum:</p>
 <ul>
-<li>I was taking five courses at Duke and was busy.</li>
-<li>I made suboptimal ex-relationship decisions that are time-consuming.</li>
-<li>I was occupied with shiny new tech, trying out Neovim, Elixir, etc.</li>
-</ul>
-<h2 id="duke-semester"><a class="header" href="#duke-semester">Duke semester</a></h2>
-<p>Duke seemed like a real school.
-People walked around carrying books and talking to others.
-In all my classes (except perhaps CS 203), class activities were unmatched
-compared to DKU classes.</p>
-<p>The courses have loads of homework, almost as much homework as DKU courses
-each week.
-But, the courses are not difficult as DKU courses in that you have the time and
-chance to &quot;breathe.&quot;
-Unlike crappy DKU seven-week courses, Duke courses last for 14 weeks,
-and give you one extra week for reviews, one extra week for final exams.</p>
-<p>I took:</p>
+<li>The template Rails generated became less useful as the project went on.</li>
+<li>For adding functionalities such as history, tags, and search,
+I introduced more and more plugins,
+each of them:
 <ul>
-<li>CS 203, Discrete Mathematics for Computer Science</li>
-<li>CS 205, Computer Architecture</li>
-<li>CS 371, Intro to Machine Learning</li>
-<li>MATH 401, Abstract Algebra</li>
-<li>MATH 431, Real Analysis</li>
+<li>needed me digging documentation to find my usecase</li>
+<li>had part of their documentation out-of-date,
+so I had to dig the GitHub issues as well</li>
+<li>introduced more &quot;magic&quot; to the codebase</li>
 </ul>
-<p>I have not much motivation to talk about them in details.</p>
-<p>In general, Duke CS classes taught me real stuff, unlike DKU CS classes…</p>
-<h2 id="ex-relationship"><a class="header" href="#ex-relationship">Ex-relationship</a></h2>
-<p>The relationship ended with a special COVID related drama that I could not
-foresee.</p>
-<p>What I did foresee, though, was its nature of temporariness.
-Back then, I wrote the relationship contract with a clause regarding break ups.</p>
-<p>What I think went wrong, was that I pet them too much and they behaved more and
-more like a pet, dependent, purposeless, and naughty.</p>
+</li>
+</ul>
+<p>Main reasons why Rails suck:</p>
+<ul>
+<li>
+<p>Too much &quot;magic.&quot;</p>
+<ul>
+<li>Everything works highly relying on metaprogramming.</li>
+<li>Global namespace pollution means it is hard to figure out
+what things are, where they are defined,
+and the language server couldn't find those either.</li>
+</ul>
+</li>
+<li>
+<p>Backwards incompatibility.</p>
+<ul>
+<li>Rails 7, as I was using, clearly made a lot of solutions that worked in
+Rails 6 not working any more.
+Devise, the authentication plugin, e.g., wouldn't work properly.</li>
+</ul>
+</li>
+<li>
+<p>Hotwire was not fun to play with.</p>
+<p>It's like playing a puzzle game, instead of helping me.</p>
+</li>
+</ul>
+<h2 id="learning-elixir"><a class="header" href="#learning-elixir">Learning Elixir</a></h2>
+<ul>
+<li>Went through Elixir official doc.</li>
+<li>Did a few Exercism exercises.</li>
+<li>Went through <em>Functional Web Development with Elixir, OTP, and Phoenix</em>
+until they started to use Phoenix channels and the API has changed.
+<ul>
+<li>Technically, only learned about Elixir, not Phoenix.</li>
+<li>GenServer is the main way to handle states and side effects.</li>
+</ul>
+</li>
+</ul>
+<h2 id="learning-phoenix"><a class="header" href="#learning-phoenix">Learning Phoenix</a></h2>
+<p>I have not actually started using Phoenix yet.</p>
+<p>When following the <em>Functional Web Development</em> book,
+I wanted to separate the Elixir project into several modules,
+so I created an umbrella project and initialized a Phoenix project inside it.
+The project straight-up could not build.</p>
+<p>I then initialized a Phoenix umbrella project.
+It builds and runs fine.
+But, it creates a weird project structure that intertwines with Phoenix.
+So, I guess I will just not use umbrellas when I want true separation.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="linux_vm_and_neovim.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="back_from_duke.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next" href="elixir_phoenix.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                                <i class="fa fa-angle-right"></i>
-                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -206,13 +234,10 @@ more like a pet, dependent, purposeless, and naughty.</p>
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="linux_vm_and_neovim.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="back_from_duke.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="elixir_phoenix.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                        <i class="fa fa-angle-right"></i>
-                    </a>
             </nav>
 
         </div>
