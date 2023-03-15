@@ -899,8 +899,35 @@ Therefore, the README suggested users to install <code>mdbook-katex</code> via
 Cargo and Git:</p>
 <pre><code class="language-shell">cargo install --git &quot;https://github.com/lzanini/mdbook-katex&quot;
 </code></pre>
-<p>There are also several very old issues lying there,
-such as math blocks breaking tables and code blocks.</p>
+<p>There were also several very old issues lying there,
+such as math blocks breaking tables and code blocks.
+Pull requests were made, but they got no response neither.</p>
+<p>The option <code>static-css</code> was extremely slow for me,
+taking around 20 seconds on my slow network.
+I later would find out that I was downloading all the fonts twice
+every time the book gets rebuilt.</p>
+<p>I posted an issue asking whether the repo was being maintained.
+That issue got no response.</p>
+<h2 id="mdbook-katex2"><a class="header" href="#mdbook-katex2"><code>mdbook-katex2</code></a></h2>
+<p>I decided that I should fork the project and maintain it myself because I
+relied on it.</p>
+<p>An issue with a simple fork would be that I could not <code>cargo install</code> it.
+Cargo has a &quot;first come first server&quot; policy so that new packages can never
+take old packages' name.
+I still wanted to have my fork on crates.io so I changed the package name to
+<code>mdbook-katex2</code>.</p>
+<p>I did many tries to fix the CI on my fork,
+creating an array of &quot;CI failed&quot; message in my mailbox,
+and eventually got the CI to pass.</p>
+<p>I published the crate and people could install it using just Cargo and no Git.
+So, I opened <a href="https://github.com/lzanini/mdbook-katex/issues/37">an issue introducing <code>mdbook-katex2</code> and thanking the original
+author</a>.</p>
+<p>To my surprise, that issue lead to a speedy response from lzanini.
+The original author offered to add me as a collaborator so I can maintain the
+original repository.
+They argued that it would be more convenient for the users.</p>
+<p>It turned out quite well, in my opinion.
+I accepted the collaborator invitation and started to maintain <code>mdbook-katex</code>.</p>
 
                     </main>
 
