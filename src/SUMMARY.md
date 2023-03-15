@@ -7,3 +7,4 @@
     - [Linux VM and Neovim](linux_vm_and_neovim.md)
 - [Back from Duke](back_from_duke.md)
     - [Elixir Phoenix](elixir_phoenix.md)
+    - [`mdbook-katex`](mdbook_katex.md)
