@@ -8,3 +8,6 @@
 - [Back from Duke](back_from_duke.md)
     - [Elixir Phoenix](elixir_phoenix.md)
     - [`mdbook-katex`](mdbook_katex.md)
+- [Spring 2024 Ideas](spring_2024_ideas.md)
+    - [Rethinking The Web](spring_2024_ideas/rethinking_the_web.md)
+    - [Rust](spring_2024_ideas/rust.md)
